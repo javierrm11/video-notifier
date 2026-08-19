@@ -35,17 +35,20 @@ def get_latest_youtube_video():
 
 
 def get_latest_tiktok_video():
-    result = subprocess.run(
-        [
-            "yt-dlp",
-            "--flat-playlist",
-            "-J",
-            f"https://www.tiktok.com/@{TIKTOK_USERNAME}",
-        ],
-        capture_output=True,
-        text=True,
-        check=True,
-    )
+    cmd = [
+        "yt-dlp",
+        "--flat-playlist",
+        "-J",
+        f"https://www.tiktok.com/@{TIKTOK_USERNAME}",
+    ]
+
+    cookies_file = os.environ.get("TIKTOK_COOKIES_FILE")
+    if cookies_file and os.path.exists(cookies_file):
+        cmd[1:1] = ["--cookies", cookies_file]
+
+    result = subprocess.run(cmd, capture_output=True, text=True)
+    if result.returncode != 0:
+        raise RuntimeError(f"yt-dlp falló: {result.stderr.strip()}")
     data = json.loads(result.stdout)
     entries = data.get("entries") or []
     if not entries:
@@ -78,7 +81,12 @@ def main():
         state["youtube"] = youtube_video["id"]
         changed = True
 
-    tiktok_video = get_latest_tiktok_video()
+    try:
+        tiktok_video = get_latest_tiktok_video()
+    except Exception as exc:
+        print(f"Aviso: no se pudo comprobar TikTok: {exc}", file=sys.stderr)
+        tiktok_video = None
+
     if tiktok_video and tiktok_video["id"] != state.get("tiktok"):
         send_telegram_message(f"🎵 Nuevo vídeo en TikTok:\n{tiktok_video['link']}")
         state["tiktok"] = tiktok_video["id"]
