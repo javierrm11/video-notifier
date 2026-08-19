@@ -1,0 +1,142 @@
+[
+  {
+    "question": "Python: ¿qué imprime print(2 ** 3 ** 2)?",
+    "options": ["512", "64", "256", "Error"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "JS: ¿qué imprime console.log(typeof NaN)?",
+    "options": ["'number'", "'NaN'", "'undefined'", "Error"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "Python: ¿qué imprime print([1,2,3] + [4,5])?",
+    "options": ["[1, 2, 3, 4, 5]", "Error", "[5, 7]", "[1,2,3,[4,5]]"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "JS: ¿qué imprime console.log(1 == '1')?",
+    "options": ["true", "false", "undefined", "Error"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "JS: ¿qué imprime console.log(1 === '1')?",
+    "options": ["false", "true", "undefined", "Error"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "¿Cuál es la complejidad de búsqueda binaria?",
+    "options": ["O(log n)", "O(n)", "O(n log n)", "O(1)"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "Python: ¿qué imprime print(len('café'))?",
+    "options": ["4", "5", "3", "Error"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "¿Qué estructura de datos usa FIFO (primero en entrar, primero en salir)?",
+    "options": ["Cola (queue)", "Pila (stack)", "Árbol", "Grafo"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "¿Qué estructura de datos usa LIFO (último en entrar, primero en salir)?",
+    "options": ["Pila (stack)", "Cola (queue)", "Lista enlazada", "Hash map"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "SQL: ¿qué cláusula filtra filas ANTES de agrupar (GROUP BY)?",
+    "options": ["WHERE", "HAVING", "ORDER BY", "LIMIT"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "SQL: ¿qué cláusula filtra grupos DESPUÉS de agrupar?",
+    "options": ["HAVING", "WHERE", "SELECT", "FROM"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "Python: ¿qué imprime print(3 // 2)?",
+    "options": ["1", "1.5", "2", "Error"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "JS: ¿qué imprime console.log([] + [])?",
+    "options": ["'' (string vacío)", "[] (array vacío)", "0", "Error"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "¿Qué significa 'CRUD'?",
+    "options": ["Create Read Update Delete", "Create Run Undo Delete", "Copy Read Use Delete", "Create Read Use Deploy"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "Git: ¿qué comando descarta cambios locales de un archivo?",
+    "options": ["git checkout -- archivo", "git commit archivo", "git push -f archivo", "git branch archivo"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "¿Cuál es la complejidad de acceder a un elemento por índice en un array?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "Python: ¿cuál es mutable?",
+    "options": ["list", "tuple", "str", "int"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "¿Qué código HTTP indica 'creado con éxito'?",
+    "options": ["201", "200", "204", "301"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "¿Qué código HTTP indica 'no autorizado'?",
+    "options": ["401", "403", "404", "500"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "¿Qué código HTTP indica 'prohibido' (tienes credenciales pero no permiso)?",
+    "options": ["403", "401", "400", "404"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "JS: ¿qué método convierte un JSON string en objeto?",
+    "options": ["JSON.parse()", "JSON.stringify()", "Object.parse()", "JSON.toObject()"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "JS: ¿qué método convierte un objeto en JSON string?",
+    "options": ["JSON.stringify()", "JSON.parse()", "Object.toJSON()", "JSON.encode()"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "¿Qué principio de POO permite que una clase herede de otra?",
+    "options": ["Herencia", "Encapsulamiento", "Polimorfismo", "Abstracción"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "¿Qué principio de POO permite que un mismo método se comporte distinto según la clase?",
+    "options": ["Polimorfismo", "Herencia", "Encapsulamiento", "Abstracción"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "Python: ¿qué imprime print(bool(''))?",
+    "options": ["False", "True", "None", "Error"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "Python: ¿qué imprime print(0.1 + 0.2 == 0.3)?",
+    "options": ["False", "True", "Error", "None"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "¿Qué comando de Git crea una nueva rama y te cambia a ella?",
+    "options": ["git checkout -b nombre", "git branch nombre", "git switch nombre", "git merge nombre"],
+    "correct_option_id": 0
+  },
+  {
+    "question": "¿Qué es un 'deadlock' en programación concurrente?",
+    "options": ["Dos procesos bloqueados esperándose entre sí", "Un bucle infinito", "Un error de sintaxis", "Falta de memoria"],
+    "correct_option_id": 0
+  }
+]

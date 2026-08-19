@@ -1,0 +1,114 @@
+[
+  {
+    "question": "¿Cuál es tu lenguaje de programación favorito?",
+    "options": ["Python", "JavaScript/TypeScript", "Java", "C/C++", "Otro (coméntalo)"]
+  },
+  {
+    "question": "¿Qué IDE o editor usas más?",
+    "options": ["VS Code", "JetBrains (IntelliJ/PyCharm...)", "Vim/Neovim", "Otro"]
+  },
+  {
+    "question": "¿Frontend o backend?",
+    "options": ["Frontend", "Backend", "Full-stack", "Ninguno, hago otra cosa"]
+  },
+  {
+    "question": "¿Cuántas horas al día programas de media?",
+    "options": ["Menos de 1h", "1-3h", "3-6h", "Más de 6h"]
+  },
+  {
+    "question": "¿Tabs o espacios?",
+    "options": ["Tabs", "Espacios", "Depende del proyecto", "Me da igual"]
+  },
+  {
+    "question": "¿Cuál crees que es el lenguaje más infravalorado?",
+    "options": ["Go", "Rust", "Elixir", "Otro (coméntalo)"]
+  },
+  {
+    "question": "¿Usas IA (Copilot, ChatGPT, Claude...) para programar?",
+    "options": ["Sí, a diario", "A veces", "Casi nunca", "Nunca"]
+  },
+  {
+    "question": "¿Qué framework de frontend prefieres?",
+    "options": ["React", "Vue", "Angular", "Svelte/Otro"]
+  },
+  {
+    "question": "¿SQL o NoSQL para un proyecto nuevo?",
+    "options": ["SQL", "NoSQL", "Ambos según el caso", "No trabajo con bases de datos"]
+  },
+  {
+    "question": "¿Cuál es tu sistema operativo principal para programar?",
+    "options": ["Windows", "macOS", "Linux", "WSL (lo mejor de los dos)"]
+  },
+  {
+    "question": "¿Qué te cuesta más como programador?",
+    "options": ["Depurar (debugging)", "Diseñar la arquitectura", "Escribir tests", "Documentar"]
+  },
+  {
+    "question": "¿Prefieres tipado estático o dinámico?",
+    "options": ["Estático (TypeScript, Java...)", "Dinámico (Python, JS...)", "Depende del proyecto", "No tengo preferencia"]
+  },
+  {
+    "question": "¿Cuál es tu mayor fuente de bugs?",
+    "options": ["Null/undefined", "Errores de lógica", "Problemas de concurrencia", "Copiar-pegar sin pensar"]
+  },
+  {
+    "question": "¿Git desde terminal o con interfaz gráfica?",
+    "options": ["Terminal", "GUI (GitKraken, Sourcetree...)", "La integrada del editor", "Mezcla de ambas"]
+  },
+  {
+    "question": "¿Qué tipo de proyecto te motiva más?",
+    "options": ["Apps web", "Apps móviles", "IA/Machine Learning", "Automatización/scripts"]
+  },
+  {
+    "question": "¿Cómo aprendiste a programar principalmente?",
+    "options": ["Autodidacta (YouTube, cursos online...)", "Carrera universitaria", "Bootcamp", "Trabajo/experiencia"]
+  },
+  {
+    "question": "¿Cuál es tu mayor distracción programando?",
+    "options": ["Redes sociales", "Stack Overflow / buscar demasiado", "Notificaciones", "Ninguna, me concentro bien"]
+  },
+  {
+    "question": "¿REST o GraphQL para una API nueva?",
+    "options": ["REST", "GraphQL", "Depende del proyecto", "No sé la diferencia"]
+  },
+  {
+    "question": "¿Qué gestor de paquetes usas más (JS)?",
+    "options": ["npm", "yarn", "pnpm", "No uso JS"]
+  },
+  {
+    "question": "¿Cuál es tu mayor reto ahora mismo aprendiendo a programar?",
+    "options": ["Entender la lógica", "Elegir qué aprender", "Mantener la constancia", "Encontrar proyectos reales"]
+  },
+  {
+    "question": "¿Prefieres trabajar solo o en equipo?",
+    "options": ["Solo", "En equipo", "Mezcla, según la tarea", "Depende del equipo"]
+  },
+  {
+    "question": "¿Qué lenguaje usarías para un proyecto nuevo hoy mismo?",
+    "options": ["Python", "TypeScript", "Go", "Otro (coméntalo)"]
+  },
+  {
+    "question": "¿Sigues alguna metodología ágil en tu día a día?",
+    "options": ["Scrum", "Kanban", "Ninguna, trabajo libre", "No sé qué es eso"]
+  },
+  {
+    "question": "¿Cuál es tu mayor 'guilty pleasure' programando?",
+    "options": ["Nombrar variables mal a propósito", "No escribir tests", "Comentar el código con memes", "Dejar TODOs eternos"]
+  },
+  {
+    "question": "¿Móvil nativo o multiplataforma?",
+    "options": ["Nativo (Swift/Kotlin)", "React Native", "Flutter", "No hago apps móviles"]
+  },
+  {
+    "question": "¿Qué tan importante crees que es el algoritmo/estructuras de datos hoy en día?",
+    "options": ["Fundamental siempre", "Solo para entrevistas", "Poco relevante en el día a día", "Depende del puesto"]
+  },
+  {
+    "question": "¿Dónde despliegas tus proyectos personales?",
+    "options": ["Vercel/Netlify", "VPS propio", "GitHub Pages", "No los despliego"]
+  },
+  {
+    "question": "¿Qué prefieres para gestionar el estado en frontend?",
+    "options": ["Context/hooks nativos", "Redux/Zustand", "No lo necesito casi nunca", "Depende del proyecto"]
+  }
+]

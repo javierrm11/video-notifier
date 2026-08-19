@@ -1,0 +1,31 @@
+name: Daily programming poll
+
+on:
+  schedule:
+    # 10:00 UTC ~= 12:00 en Madrid en horario de verano (CEST).
+    - cron: "0 10 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Send daily poll
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_COMMUNITY_CHAT_ID: ${{ secrets.TELEGRAM_COMMUNITY_CHAT_ID }}
+        run: python daily_poll.py

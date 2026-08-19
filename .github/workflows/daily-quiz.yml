@@ -1,0 +1,31 @@
+name: Daily code quiz
+
+on:
+  schedule:
+    # 16:00 UTC ~= 18:00 en Madrid en horario de verano (CEST).
+    - cron: "0 16 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  quiz:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Send daily quiz
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_COMMUNITY_CHAT_ID: ${{ secrets.TELEGRAM_COMMUNITY_CHAT_ID }}
+        run: python daily_quiz.py

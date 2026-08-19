@@ -7,6 +7,7 @@ import feedparser
 import requests
 
 STATE_FILE = "last_video.json"
+CHECK_TARGET = os.environ.get("CHECK_TARGET", "all")  # "youtube", "tiktok" o "all"
 
 YOUTUBE_CHANNEL_ID = os.environ["YOUTUBE_CHANNEL_ID"]
 TIKTOK_USERNAME = os.environ["TIKTOK_USERNAME"]
@@ -73,22 +74,24 @@ def main():
     state = load_state()
     changed = False
 
-    youtube_video = get_latest_youtube_video()
-    if youtube_video and youtube_video["id"] != state.get("youtube"):
-        send_telegram_message(f"🎬 Nuevo vídeo en YouTube:\n{youtube_video['link']}")
-        state["youtube"] = youtube_video["id"]
-        changed = True
+    if CHECK_TARGET in ("youtube", "all"):
+        youtube_video = get_latest_youtube_video()
+        if youtube_video and youtube_video["id"] != state.get("youtube"):
+            send_telegram_message(f"🎬 Nuevo vídeo en YouTube:\n{youtube_video['link']}")
+            state["youtube"] = youtube_video["id"]
+            changed = True
 
-    try:
-        tiktok_video = get_latest_tiktok_video()
-    except Exception as exc:
-        print(f"Aviso: no se pudo comprobar TikTok: {exc}", file=sys.stderr)
-        tiktok_video = None
+    if CHECK_TARGET in ("tiktok", "all"):
+        try:
+            tiktok_video = get_latest_tiktok_video()
+        except Exception as exc:
+            print(f"Aviso: no se pudo comprobar TikTok: {exc}", file=sys.stderr)
+            tiktok_video = None
 
-    if tiktok_video and tiktok_video["id"] != state.get("tiktok"):
-        send_telegram_message(f"🎵 Nuevo vídeo en TikTok:\n{tiktok_video['link']}")
-        state["tiktok"] = tiktok_video["id"]
-        changed = True
+        if tiktok_video and tiktok_video["id"] != state.get("tiktok"):
+            send_telegram_message(f"🎵 Nuevo vídeo en TikTok:\n{tiktok_video['link']}")
+            state["tiktok"] = tiktok_video["id"]
+            changed = True
 
     if changed:
         save_state(state)
